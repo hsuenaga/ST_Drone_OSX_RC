@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		46AD055C2696B3A0004F0F5F /* ST_Drone_OSX_RCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD055B2696B3A0004F0F5F /* ST_Drone_OSX_RCApp.swift */; };
+		46AD055E2696B3A0004F0F5F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD055D2696B3A0004F0F5F /* ContentView.swift */; };
+		46AD05602696B3A1004F0F5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46AD055F2696B3A1004F0F5F /* Assets.xcassets */; };
+		46AD05632696B3A1004F0F5F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46AD05622696B3A1004F0F5F /* Preview Assets.xcassets */; };
+		46AD056F2696B3A1004F0F5F /* ST_Drone_OSX_RCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD056E2696B3A1004F0F5F /* ST_Drone_OSX_RCTests.swift */; };
+		46AD057A2696B3A1004F0F5F /* ST_Drone_OSX_RCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD05792696B3A1004F0F5F /* ST_Drone_OSX_RCUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		46AD056B2696B3A1004F0F5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46AD05502696B3A0004F0F5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46AD05572696B3A0004F0F5F;
+			remoteInfo = ST_Drone_OSX_RC;
+		};
+		46AD05762696B3A1004F0F5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46AD05502696B3A0004F0F5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46AD05572696B3A0004F0F5F;
+			remoteInfo = ST_Drone_OSX_RC;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		46AD05582696B3A0004F0F5F /* ST_Drone_OSX_RC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ST_Drone_OSX_RC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		46AD055B2696B3A0004F0F5F /* ST_Drone_OSX_RCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ST_Drone_OSX_RCApp.swift; sourceTree = "<group>"; };
+		46AD055D2696B3A0004F0F5F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		46AD055F2696B3A1004F0F5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		46AD05622696B3A1004F0F5F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		46AD05642696B3A1004F0F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46AD05652696B3A1004F0F5F /* ST_Drone_OSX_RC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ST_Drone_OSX_RC.entitlements; sourceTree = "<group>"; };
+		46AD056A2696B3A1004F0F5F /* ST_Drone_OSX_RCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ST_Drone_OSX_RCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		46AD056E2696B3A1004F0F5F /* ST_Drone_OSX_RCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ST_Drone_OSX_RCTests.swift; sourceTree = "<group>"; };
+		46AD05702696B3A1004F0F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46AD05752696B3A1004F0F5F /* ST_Drone_OSX_RCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ST_Drone_OSX_RCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		46AD05792696B3A1004F0F5F /* ST_Drone_OSX_RCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ST_Drone_OSX_RCUITests.swift; sourceTree = "<group>"; };
+		46AD057B2696B3A1004F0F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		46AD05552696B3A0004F0F5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46AD05672696B3A1004F0F5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46AD05722696B3A1004F0F5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		46AD054F2696B3A0004F0F5F = {
+			isa = PBXGroup;
+			children = (
+				46AD055A2696B3A0004F0F5F /* ST_Drone_OSX_RC */,
+				46AD056D2696B3A1004F0F5F /* ST_Drone_OSX_RCTests */,
+				46AD05782696B3A1004F0F5F /* ST_Drone_OSX_RCUITests */,
+				46AD05592696B3A0004F0F5F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		46AD05592696B3A0004F0F5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				46AD05582696B3A0004F0F5F /* ST_Drone_OSX_RC.app */,
+				46AD056A2696B3A1004F0F5F /* ST_Drone_OSX_RCTests.xctest */,
+				46AD05752696B3A1004F0F5F /* ST_Drone_OSX_RCUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		46AD055A2696B3A0004F0F5F /* ST_Drone_OSX_RC */ = {
+			isa = PBXGroup;
+			children = (
+				46AD055B2696B3A0004F0F5F /* ST_Drone_OSX_RCApp.swift */,
+				46AD055D2696B3A0004F0F5F /* ContentView.swift */,
+				46AD055F2696B3A1004F0F5F /* Assets.xcassets */,
+				46AD05642696B3A1004F0F5F /* Info.plist */,
+				46AD05652696B3A1004F0F5F /* ST_Drone_OSX_RC.entitlements */,
+				46AD05612696B3A1004F0F5F /* Preview Content */,
+			);
+			path = ST_Drone_OSX_RC;
+			sourceTree = "<group>";
+		};
+		46AD05612696B3A1004F0F5F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				46AD05622696B3A1004F0F5F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		46AD056D2696B3A1004F0F5F /* ST_Drone_OSX_RCTests */ = {
+			isa = PBXGroup;
+			children = (
+				46AD056E2696B3A1004F0F5F /* ST_Drone_OSX_RCTests.swift */,
+				46AD05702696B3A1004F0F5F /* Info.plist */,
+			);
+			path = ST_Drone_OSX_RCTests;
+			sourceTree = "<group>";
+		};
+		46AD05782696B3A1004F0F5F /* ST_Drone_OSX_RCUITests */ = {
+			isa = PBXGroup;
+			children = (
+				46AD05792696B3A1004F0F5F /* ST_Drone_OSX_RCUITests.swift */,
+				46AD057B2696B3A1004F0F5F /* Info.plist */,
+			);
+			path = ST_Drone_OSX_RCUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		46AD05572696B3A0004F0F5F /* ST_Drone_OSX_RC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46AD057E2696B3A1004F0F5F /* Build configuration list for PBXNativeTarget "ST_Drone_OSX_RC" */;
+			buildPhases = (
+				46AD05542696B3A0004F0F5F /* Sources */,
+				46AD05552696B3A0004F0F5F /* Frameworks */,
+				46AD05562696B3A0004F0F5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ST_Drone_OSX_RC;
+			productName = ST_Drone_OSX_RC;
+			productReference = 46AD05582696B3A0004F0F5F /* ST_Drone_OSX_RC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		46AD05692696B3A1004F0F5F /* ST_Drone_OSX_RCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46AD05812696B3A1004F0F5F /* Build configuration list for PBXNativeTarget "ST_Drone_OSX_RCTests" */;
+			buildPhases = (
+				46AD05662696B3A1004F0F5F /* Sources */,
+				46AD05672696B3A1004F0F5F /* Frameworks */,
+				46AD05682696B3A1004F0F5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46AD056C2696B3A1004F0F5F /* PBXTargetDependency */,
+			);
+			name = ST_Drone_OSX_RCTests;
+			productName = ST_Drone_OSX_RCTests;
+			productReference = 46AD056A2696B3A1004F0F5F /* ST_Drone_OSX_RCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		46AD05742696B3A1004F0F5F /* ST_Drone_OSX_RCUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46AD05842696B3A1004F0F5F /* Build configuration list for PBXNativeTarget "ST_Drone_OSX_RCUITests" */;
+			buildPhases = (
+				46AD05712696B3A1004F0F5F /* Sources */,
+				46AD05722696B3A1004F0F5F /* Frameworks */,
+				46AD05732696B3A1004F0F5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46AD05772696B3A1004F0F5F /* PBXTargetDependency */,
+			);
+			name = ST_Drone_OSX_RCUITests;
+			productName = ST_Drone_OSX_RCUITests;
+			productReference = 46AD05752696B3A1004F0F5F /* ST_Drone_OSX_RCUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		46AD05502696B3A0004F0F5F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					46AD05572696B3A0004F0F5F = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					46AD05692696B3A1004F0F5F = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 46AD05572696B3A0004F0F5F;
+					};
+					46AD05742696B3A1004F0F5F = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 46AD05572696B3A0004F0F5F;
+					};
+				};
+			};
+			buildConfigurationList = 46AD05532696B3A0004F0F5F /* Build configuration list for PBXProject "ST_Drone_OSX_RC" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 46AD054F2696B3A0004F0F5F;
+			productRefGroup = 46AD05592696B3A0004F0F5F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				46AD05572696B3A0004F0F5F /* ST_Drone_OSX_RC */,
+				46AD05692696B3A1004F0F5F /* ST_Drone_OSX_RCTests */,
+				46AD05742696B3A1004F0F5F /* ST_Drone_OSX_RCUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		46AD05562696B3A0004F0F5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46AD05632696B3A1004F0F5F /* Preview Assets.xcassets in Resources */,
+				46AD05602696B3A1004F0F5F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46AD05682696B3A1004F0F5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46AD05732696B3A1004F0F5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		46AD05542696B3A0004F0F5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46AD055E2696B3A0004F0F5F /* ContentView.swift in Sources */,
+				46AD055C2696B3A0004F0F5F /* ST_Drone_OSX_RCApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46AD05662696B3A1004F0F5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46AD056F2696B3A1004F0F5F /* ST_Drone_OSX_RCTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46AD05712696B3A1004F0F5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46AD057A2696B3A1004F0F5F /* ST_Drone_OSX_RCUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		46AD056C2696B3A1004F0F5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46AD05572696B3A0004F0F5F /* ST_Drone_OSX_RC */;
+			targetProxy = 46AD056B2696B3A1004F0F5F /* PBXContainerItemProxy */;
+		};
+		46AD05772696B3A1004F0F5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46AD05572696B3A0004F0F5F /* ST_Drone_OSX_RC */;
+			targetProxy = 46AD05762696B3A1004F0F5F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		46AD057C2696B3A1004F0F5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		46AD057D2696B3A1004F0F5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		46AD057F2696B3A1004F0F5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ST_Drone_OSX_RC/ST_Drone_OSX_RC.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"ST_Drone_OSX_RC/Preview Content\"";
+				DEVELOPMENT_TEAM = BSVYLYB6S2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = ST_Drone_OSX_RC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mac.hiroki-suenaga.ST-Drone-OSX-RC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		46AD05802696B3A1004F0F5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ST_Drone_OSX_RC/ST_Drone_OSX_RC.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"ST_Drone_OSX_RC/Preview Content\"";
+				DEVELOPMENT_TEAM = BSVYLYB6S2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = ST_Drone_OSX_RC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mac.hiroki-suenaga.ST-Drone-OSX-RC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		46AD05822696B3A1004F0F5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = BSVYLYB6S2;
+				INFOPLIST_FILE = ST_Drone_OSX_RCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mac.hiroki-suenaga.ST-Drone-OSX-RCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ST_Drone_OSX_RC.app/Contents/MacOS/ST_Drone_OSX_RC";
+			};
+			name = Debug;
+		};
+		46AD05832696B3A1004F0F5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = BSVYLYB6S2;
+				INFOPLIST_FILE = ST_Drone_OSX_RCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mac.hiroki-suenaga.ST-Drone-OSX-RCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ST_Drone_OSX_RC.app/Contents/MacOS/ST_Drone_OSX_RC";
+			};
+			name = Release;
+		};
+		46AD05852696B3A1004F0F5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = BSVYLYB6S2;
+				INFOPLIST_FILE = ST_Drone_OSX_RCUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mac.hiroki-suenaga.ST-Drone-OSX-RCUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = ST_Drone_OSX_RC;
+			};
+			name = Debug;
+		};
+		46AD05862696B3A1004F0F5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = BSVYLYB6S2;
+				INFOPLIST_FILE = ST_Drone_OSX_RCUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mac.hiroki-suenaga.ST-Drone-OSX-RCUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = ST_Drone_OSX_RC;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		46AD05532696B3A0004F0F5F /* Build configuration list for PBXProject "ST_Drone_OSX_RC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46AD057C2696B3A1004F0F5F /* Debug */,
+				46AD057D2696B3A1004F0F5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46AD057E2696B3A1004F0F5F /* Build configuration list for PBXNativeTarget "ST_Drone_OSX_RC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46AD057F2696B3A1004F0F5F /* Debug */,
+				46AD05802696B3A1004F0F5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46AD05812696B3A1004F0F5F /* Build configuration list for PBXNativeTarget "ST_Drone_OSX_RCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46AD05822696B3A1004F0F5F /* Debug */,
+				46AD05832696B3A1004F0F5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46AD05842696B3A1004F0F5F /* Build configuration list for PBXNativeTarget "ST_Drone_OSX_RCUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46AD05852696B3A1004F0F5F /* Debug */,
+				46AD05862696B3A1004F0F5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 46AD05502696B3A0004F0F5F /* Project object */;
+}
