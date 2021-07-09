@@ -12,24 +12,17 @@ struct ValueView: View {
     var label = ""
     var value = ""
 
-    init(label: String, value: UInt16) {
+    init<T:BinaryInteger>(label: String, value: T) {
         self.label = label
         self.value = String(value)
     }
 
-    init(label: String, value: UInt32) {
-        self.label = label
-        self.value = String(value)
-    }
+    init<T:BinaryInteger>(label: String, value:T, divider:Int) {
+        let intPart = value / T(divider)
+        let decPart = value % T(divider)
 
-    init(label: String, value: Int16) {
         self.label = label
-        self.value = String(value)
-    }
-
-    init(label: String, value: Int32) {
-        self.label = label
-        self.value = String(value)
+        self.value = String(intPart) + "." + String(decPart)
     }
 
     init(label: String, value: Bool) {
@@ -55,10 +48,11 @@ struct EnvironmentView: View {
 
     var body: some View {
         ValueView(label: "Tick", value: environment.tick)
-        ValueView(label: "Pressure", value:environment.pressure)
-        ValueView(label: "Battery", value:environment.battery)
-        ValueView(label: "Temprature", value: environment.temprature)
-        ValueView(label: "RSSI", value:environment.RSSI)
+        ValueView(label: "Pressure [hpa]", value:environment.pressure, divider: 100)
+        ValueView(label: "Battery [%]", value:environment.battery, divider: 10)
+        ValueView(label: "Temprature [C]", value: environment.temprature, divider: 10)
+        ValueView(label: "RSSI [dbm]", value:environment.RSSI,
+                  divider: 10)
     }
 }
 
