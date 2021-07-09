@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		46AD05632696B3A1004F0F5F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46AD05622696B3A1004F0F5F /* Preview Assets.xcassets */; };
 		46AD056F2696B3A1004F0F5F /* ST_Drone_OSX_RCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD056E2696B3A1004F0F5F /* ST_Drone_OSX_RCTests.swift */; };
 		46AD057A2696B3A1004F0F5F /* ST_Drone_OSX_RCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD05792696B3A1004F0F5F /* ST_Drone_OSX_RCUITests.swift */; };
+		46AD05892696B50E004F0F5F /* STDroneOSX in Frameworks */ = {isa = PBXBuildFile; productRef = 46AD05882696B50E004F0F5F /* STDroneOSX */; };
+		46AD058B2696E192004F0F5F /* ST_Drone_OSX_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD058A2696E192004F0F5F /* ST_Drone_OSX_Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,7 @@
 		46AD05752696B3A1004F0F5F /* ST_Drone_OSX_RCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ST_Drone_OSX_RCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46AD05792696B3A1004F0F5F /* ST_Drone_OSX_RCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ST_Drone_OSX_RCUITests.swift; sourceTree = "<group>"; };
 		46AD057B2696B3A1004F0F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46AD058A2696E192004F0F5F /* ST_Drone_OSX_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ST_Drone_OSX_Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46AD05892696B50E004F0F5F /* STDroneOSX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +102,7 @@
 			children = (
 				46AD055B2696B3A0004F0F5F /* ST_Drone_OSX_RCApp.swift */,
 				46AD055D2696B3A0004F0F5F /* ContentView.swift */,
+				46AD058A2696E192004F0F5F /* ST_Drone_OSX_Model.swift */,
 				46AD055F2696B3A1004F0F5F /* Assets.xcassets */,
 				46AD05642696B3A1004F0F5F /* Info.plist */,
 				46AD05652696B3A1004F0F5F /* ST_Drone_OSX_RC.entitlements */,
@@ -148,6 +153,9 @@
 			dependencies = (
 			);
 			name = ST_Drone_OSX_RC;
+			packageProductDependencies = (
+				46AD05882696B50E004F0F5F /* STDroneOSX */,
+			);
 			productName = ST_Drone_OSX_RC;
 			productReference = 46AD05582696B3A0004F0F5F /* ST_Drone_OSX_RC.app */;
 			productType = "com.apple.product-type.application";
@@ -219,6 +227,9 @@
 				Base,
 			);
 			mainGroup = 46AD054F2696B3A0004F0F5F;
+			packageReferences = (
+				46AD05872696B50E004F0F5F /* XCRemoteSwiftPackageReference "ST_Drone_OSX_BLE" */,
+			);
 			productRefGroup = 46AD05592696B3A0004F0F5F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46AD058B2696E192004F0F5F /* ST_Drone_OSX_Model.swift in Sources */,
 				46AD055E2696B3A0004F0F5F /* ContentView.swift in Sources */,
 				46AD055C2696B3A0004F0F5F /* ST_Drone_OSX_RCApp.swift in Sources */,
 			);
@@ -585,6 +597,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		46AD05872696B50E004F0F5F /* XCRemoteSwiftPackageReference "ST_Drone_OSX_BLE" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hsuenaga/ST_Drone_OSX_BLE.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		46AD05882696B50E004F0F5F /* STDroneOSX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 46AD05872696B50E004F0F5F /* XCRemoteSwiftPackageReference "ST_Drone_OSX_BLE" */;
+			productName = STDroneOSX;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 46AD05502696B3A0004F0F5F /* Project object */;
 }
