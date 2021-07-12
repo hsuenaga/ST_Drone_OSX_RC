@@ -94,24 +94,55 @@ struct ContentView: View {
     @EnvironmentObject var model: W2STModel
 
     var body: some View {
-        VStack {
-            Text("Telemetry Data").font(.title)
+        HStack {
             HStack {
-                Toggle(isOn: $model.enableConnect) {
-                    Text(model.enableConnect ? "Connected": "Disconnected")
-                }.toggleStyle(SwitchToggleStyle())
-                Toggle(isOn: $model.calibrate) {
-                    Text("Calibrate")
-                }.disabled(!model.enableConnect)
+                VStack {
+                    Text("Telemetry Data").font(.title)
+                    HStack {
+                        Toggle(isOn: $model.enableConnect) {
+                            Text(model.enableConnect ? "Connected": "Disconnected")
+                        }.toggleStyle(SwitchToggleStyle())
+                        Toggle(isOn: $model.calibrate) {
+                            Text("Calibrate")
+                        }.disabled(!model.enableConnect)
+                    }
+
+                    Divider()
+                    ArmingView(arming: model.telemetry.arming)
+
+                    Divider()
+                    EnvironmentView(environment:model.telemetry.environment)
+
+                    Divider()
+                    AHRSView(ahrs:model.telemetry.AHRS)
+                    Spacer()
+                }
             }
-            Divider()
-            ArmingView(arming: model.telemetry.arming)
-            Divider()
-            EnvironmentView(environment:model.telemetry.environment)
-            Divider()
-            AHRSView(ahrs:model.telemetry.AHRS)
-            Divider()
-        }.padding()
+
+            VStack {
+                Divider()
+                Text("STDOUT").font(.title)
+                Divider()
+                ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, content: {
+                    HStack() {
+                        Text(model.telemetry.stdout)
+                            .multilineTextAlignment(.leading)
+                        Spacer()
+                    }
+                })
+                Divider()
+                Text("STDERR").font(.title)
+                Divider()
+                ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, content: {
+                    HStack() {
+                        Text(model.telemetry.stderr)
+                            .multilineTextAlignment(.leading)
+                        Spacer()
+                    }
+                })
+            }
+        }
+
     }
 }
 
