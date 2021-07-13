@@ -18,11 +18,21 @@ struct ValueView: View {
     }
 
     init<T:BinaryInteger>(label: String, value:T, divider:Int) {
-        let intPart = value / T(divider)
-        let decPart = value % T(divider)
+        let fvalue = Float(value) / Float(divider)
 
         self.label = label
-        self.value = String(intPart) + "." + String(decPart)
+        self.value = String(format:"%+04.3f", fvalue)
+    }
+
+    init(label: String, rad:Int16) {
+        self.label = label
+        self.value = String(Float(rad) / Float.pi * 180.0) // rad to degree.
+    }
+
+    init(label: String, value:Int16, FS:Int16) {
+        self.label = label;
+        let fvalue = Float(FS) / Float(Int16.max) * Float(value);
+        self.value = String(format:"%+04.3f", fvalue)
     }
 
     init(label: String, value: Bool) {
@@ -65,15 +75,15 @@ struct AHRSView: View {
 
     var body: some View {
         ValueView(label: "Tick", value:ahrs.tick)
-        ValueView(label: "Acceleration.X", value: ahrs.acceleration.x)
-        ValueView(label: "Acceleration.Y", value: ahrs.acceleration.y)
-        ValueView(label: "Acceleration.Z", value: ahrs.acceleration.z)
-        ValueView(label: "Gyrometer.X", value: ahrs.gyrometer.x)
-        ValueView(label: "Gyrometer.Y", value: ahrs.gyrometer.y)
-        ValueView(label: "Gyrometer.Z", value: ahrs.gyrometer.z)
-        ValueView(label: "Axis.X", value: ahrs.axis.x)
-        ValueView(label: "Axis.Y", value: ahrs.axis.y)
-        ValueView(label: "Axis.Z", value: ahrs.axis.z)
+        ValueView(label: "Acceleration.X [g]", value: ahrs.acceleration.x, divider:1000)
+        ValueView(label: "Acceleration.Y [g]", value: ahrs.acceleration.y, divider:1000)
+        ValueView(label: "Acceleration.Z [g]", value: ahrs.acceleration.z, divider:1000)
+        ValueView(label: "Gyrometer.X [dps]", value: ahrs.gyrometer.x, divider:1000)
+        ValueView(label: "Gyrometer.Y [dps]", value: ahrs.gyrometer.y, divider:1000)
+        ValueView(label: "Gyrometer.Z [dps]", value: ahrs.gyrometer.z, divider:1000)
+        ValueView(label: "Magneto.X [gauss]", value: ahrs.mag.x, divider:1000)
+        ValueView(label: "Magneto.Y [gauss]", value: ahrs.mag.y, divider:1000)
+        ValueView(label: "Magneto.Z [gauss]", value: ahrs.mag.z, divider:1000)
     }
 }
 
