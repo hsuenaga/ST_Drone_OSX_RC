@@ -7,6 +7,7 @@
 
 import SwiftUI
 import STDroneOSX
+import GameController
 
 struct ValueView: View {
     var label = ""
@@ -100,6 +101,25 @@ struct ArmingView: View {
     }
 }
 
+struct GCView: View {
+    @EnvironmentObject var model: W2STModel
+
+    var body: some View {
+        VStack {
+            Text("Controller").font(.title)
+            Text(model.controllerName)
+            Divider()
+            ValueView(label: "Ailron", value: model.aileron)
+            ValueView(label: "Elevator", value: model.elevator)
+            ValueView(label: "Throttle", value: model.throttle)
+            ValueView(label: "Rudder", value: model.rudder)
+            ValueView(label: "Armed", value: model.arm)
+            ValueView(label: "Calibrate", value: model.calibrate)
+            Spacer()
+        }
+    }
+}
+
 struct ContentView: View {
     @EnvironmentObject var model: W2STModel
 
@@ -115,8 +135,11 @@ struct ContentView: View {
                         Toggle(isOn: $model.calibrate) {
                             Text("Calibrate")
                         }.disabled(!model.enableConnect)
+                        Toggle(isOn: $model.arm) {
+                            Text("Armed")
+                        }.disabled(!model.enableConnect)
                     }
-
+                    Text(model.peripheral?.identifier.uuidString ?? "NO Drone ID")
                     Divider()
                     ArmingView(arming: model.telemetry.arming)
 
@@ -127,6 +150,11 @@ struct ContentView: View {
                     AHRSView(ahrs:model.telemetry.AHRS)
                     Spacer()
                 }
+            }
+
+            VStack {
+                Divider()
+                GCView()
             }
 
             VStack {
