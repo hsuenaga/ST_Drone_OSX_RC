@@ -59,6 +59,13 @@ final class GameController {
             self.controller?.playerIndex = GCControllerPlayerIndex.indexUnset
             self.controller = nil
         }
+        self.handler?.description("No Controller")
+        self.handler?.ailron(128)
+        self.handler?.elevator(128)
+        self.handler?.throttle(1)
+        self.handler?.rudder(0)
+        self.handler?.calibrate(false)
+        self.handler?.armed(false)
     }
 
     func calcAxis(_ value:Float) -> UInt8 {
@@ -76,9 +83,9 @@ final class GameController {
     }
 
     func calcThrottle(_ value:Float) -> UInt8 {
-        let pos = 26.0 * value
+        let pos = 25.0 * value + 1.0
 
-        if (value < 0.0) {
+        if (pos < 0.0) {
             return 0
         }
         if (pos > 26.0) {
@@ -124,7 +131,7 @@ final class W2STModel: ObservableObject {
             updateControlData()
         }
     }
-    @Published var throttle: UInt8 = 0 {
+    @Published var throttle: UInt8 = 1 {
         didSet {
             updateControlData()
         }
@@ -214,6 +221,10 @@ final class W2STModel: ObservableObject {
                 return
             }
             peripheral.discoverAll() {
+                peripheral.onDisconnect {
+                    self.enableConnect = false
+                    return
+                }
                 peripheral.onUpdate {telemetry in
                     self.telemetry = telemetry
                 }
