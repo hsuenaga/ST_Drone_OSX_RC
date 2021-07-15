@@ -120,67 +120,75 @@ struct GCView: View {
     }
 }
 
+struct TelemetryView: View {
+	@EnvironmentObject var model: W2STModel
+
+	var body: some View {
+		VStack {
+		    Text("Telemetry Data").font(.title)
+		    HStack {
+			Toggle(isOn: $model.enableConnect) {
+			    Text(model.enableConnect ? "Connected": "Disconnected")
+			}.toggleStyle(SwitchToggleStyle())
+			Toggle(isOn: $model.calibrate) {
+			    Text("Calibrate")
+			}.disabled(!model.enableConnect)
+			Toggle(isOn: $model.arm) {
+			    Text("Armed")
+			}.disabled(!model.enableConnect)
+		    }
+		    Text(model.peripheral?.identifier.uuidString ?? "NO Drone ID")
+		    Divider()
+		    ArmingView(arming: model.telemetry.arming)
+
+		    Divider()
+		    EnvironmentView(environment:model.telemetry.environment)
+
+		    Divider()
+		    AHRSView(ahrs:model.telemetry.AHRS)
+		    Spacer()
+		}
+	}
+}
+
+struct ConsoleView: View {
+	@EnvironmentObject var model:W2STModel
+
+	var body: some View {
+		VStack {
+			Divider()
+			Text("STDOUT").font(.title)
+			Divider()
+			ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, content: {
+				HStack() {
+					Text(model.telemetry.stdout)
+						.multilineTextAlignment(.leading)
+					Spacer()
+				}
+			})
+			Divider()
+			Text("STDERR").font(.title)
+			Divider()
+			ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, content: {
+				HStack() {
+					Text(model.telemetry.stderr)
+						.multilineTextAlignment(.leading)
+					Spacer()
+				}
+			})
+		}
+	}
+}
+
 struct ContentView: View {
     @EnvironmentObject var model: W2STModel
 
     var body: some View {
         HStack {
-            HStack {
-                VStack {
-                    Text("Telemetry Data").font(.title)
-                    HStack {
-                        Toggle(isOn: $model.enableConnect) {
-                            Text(model.enableConnect ? "Connected": "Disconnected")
-                        }.toggleStyle(SwitchToggleStyle())
-                        Toggle(isOn: $model.calibrate) {
-                            Text("Calibrate")
-                        }.disabled(!model.enableConnect)
-                        Toggle(isOn: $model.arm) {
-                            Text("Armed")
-                        }.disabled(!model.enableConnect)
-                    }
-                    Text(model.peripheral?.identifier.uuidString ?? "NO Drone ID")
-                    Divider()
-                    ArmingView(arming: model.telemetry.arming)
-
-                    Divider()
-                    EnvironmentView(environment:model.telemetry.environment)
-
-                    Divider()
-                    AHRSView(ahrs:model.telemetry.AHRS)
-                    Spacer()
-                }
-            }
-
-            VStack {
-                Divider()
-                GCView()
-            }
-
-            VStack {
-                Divider()
-                Text("STDOUT").font(.title)
-                Divider()
-                ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, content: {
-                    HStack() {
-                        Text(model.telemetry.stdout)
-                            .multilineTextAlignment(.leading)
-                        Spacer()
-                    }
-                })
-                Divider()
-                Text("STDERR").font(.title)
-                Divider()
-                ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, content: {
-                    HStack() {
-                        Text(model.telemetry.stderr)
-                            .multilineTextAlignment(.leading)
-                        Spacer()
-                    }
-                })
-            }
+		TelemetryView()
+		GCView()
+		ConsoleView()
         }
-
     }
 }
 
