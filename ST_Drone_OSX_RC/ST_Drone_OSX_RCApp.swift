@@ -9,12 +9,12 @@ import SwiftUI
 
 @main
 struct ST_Drone_OSX_RCApp: App {
-    @StateObject private var modelData: W2STModel = W2STModel()
-
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-                .environmentObject(modelData)
-        }
-    }
+	@StateObject private var modelData: W2STModel = W2STModel()
+	
+	var body: some Scene {
+		WindowGroup {
+			ContentView()
+				.environmentObject(modelData)
+		}
+	}
 }
