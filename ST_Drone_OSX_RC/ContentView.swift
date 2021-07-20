@@ -151,31 +151,44 @@ struct TelemetryView: View {
 	}
 }
 
+struct MultilineTextView: View {
+	var Buffer:[String]
+	var caption:String
+	@Namespace var bottomID
+
+	init(_ content:[String], caption:String?) {
+		self.Buffer = content
+		self.caption = caption ?? "TEXT"
+	}
+
+	var body: some View {
+		Divider()
+		Text(caption).font(.title)
+		Divider()
+		ScrollViewReader { proxy in
+			ScrollView(.vertical, showsIndicators: true) {
+				ForEach(Buffer, id:\.self) { line in
+					HStack {
+						Text(line)
+						Spacer()
+					}
+				}
+				Text("").id(bottomID)
+			}
+			.onChange(of: Buffer, perform: { value in
+				proxy.scrollTo(bottomID, anchor: .bottom)
+			})
+		}
+	}
+}
+
 struct ConsoleView: View {
 	@EnvironmentObject var model:W2STModel
 
 	var body: some View {
 		VStack {
-			Divider()
-			Text("STDOUT").font(.title)
-			Divider()
-			ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, content: {
-				HStack() {
-					Text(model.telemetry.stdout)
-						.multilineTextAlignment(.leading)
-					Spacer()
-				}
-			})
-			Divider()
-			Text("STDERR").font(.title)
-			Divider()
-			ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, content: {
-				HStack() {
-					Text(model.telemetry.stderr)
-						.multilineTextAlignment(.leading)
-					Spacer()
-				}
-			})
+			MultilineTextView(model.telemetry.stdout, caption: "STDOUT")
+			MultilineTextView(model.telemetry.stderr, caption: "STDERR")
 		}
 	}
 }
